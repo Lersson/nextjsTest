@@ -86,36 +86,13 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     curl \
     nano \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
 RUN curl -sL https://deb.nodesource.com/setup_20.x | bash -
 RUN apt-get install -y nodejs
 
-COPY . .
-
-# Install any necessary packages
-# Example:
-# RUN apt-get install -y package_name
-
-# (Optional) Set environment variables if needed
-# ENV KEY=value
-
-# (Optional) Set the working directory inside the container
-# WORKDIR /path/to/working/directory
-
-# (Optional) Expose any ports the app may need
-# EXPOSE port_number
-
-# (Optional) Copy files from your host to your image filesystem
-# COPY /path/on/host /path/in/container
-
-# (Optional) Run any commands required to set up your image
-# For example, to start a service:
-# CMD ["service", "service_name", "start"]
-
-# (Optional) Set the command to run your application
-# CMD ["executable","param1","param2"]
-
-# Example: Run bash when the container launches
-# CMD ["bash"]
+#configura proxy apt
+RUN echo 'Acquire::http::Proxy "http://proxy.prodemge.gov.br:8080";' >> /etc/apt/apt.conf.d/01proxy \ 
+&& echo 'Acquire::https::Proxy "http://proxy.prodemge.gov.br:8080";' >> /etc/apt/apt.conf.d/01proxy
 CMD ["tail", "-f", "/dev/null"]
