@@ -1,5 +1,5 @@
 
-export default async function getUsers(){
+export default function getUsers(){
 
 //   const apiLocal = process.env.NEXT_PUBLIC_API_LOCAL
 
