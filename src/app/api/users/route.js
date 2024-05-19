@@ -1,20 +1,18 @@
-// export const dynamic = 'force-dynamic';
 
+export async function GET() {
 
-// export async function GET() {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL
 
-//     const apiUrl = process.env.NEXT_PUBLIC_API_URL
+    const res = await fetch(`${apiUrl}/users`, {
+        cache: 'no-store',
+        method: "GET",
+        headers: {
+            'Content-Type':  'application/json',
+        }
+    })
 
-//     const res = await fetch(`${apiUrl}/users`, {
-//         cache: 'no-store',
-//         method: "GET",
-//         headers: {
-//             'Content-Type':  'application/json',
-//         }
-//     })
+    const data = await res.json()
 
-//     const data = await res.json()
-
-//     return Response.json(data)
-// }
+    return Response.json(data)
+}
 

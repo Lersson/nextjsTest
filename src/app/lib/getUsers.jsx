@@ -1,18 +1,18 @@
 
-export default function getUsers(){
 
-//   const apiLocal = process.env.NEXT_PUBLIC_API_LOCAL
+export default async function getUsers(){
 
-// const res = await fetch(`${apiLocal}/users`, {})
+  const apiLocal = process.env.NEXT_PUBLIC_API_LOCAL
 
-//         if (!res.ok) {
-//             // This will activate the closest `error.js` Error Boundary
-//             throw new Error('Failed to fetch data')
-//         }
+const res = await fetch(`${apiLocal}/users`, {})
+
+        if (!res.ok) {
+            // This will activate the closest `error.js` Error Boundary
+            throw new Error('Failed to fetch data')
+        }
     
-//         const data = await res.json()
+        const data = await res.json()
         
-        // return data
-        return 'this is my api'
+        return data
     
 }
