@@ -1,6 +1,8 @@
 export default async function getUsers(){
 
-const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users`, {})
+  const apiLocal = process.env.NEXT_PUBLIC_API_LOCAL
+
+const res = await fetch(`${apiLocal}/users`, {})
 
         if (!res.ok) {
             // This will activate the closest `error.js` Error Boundary
