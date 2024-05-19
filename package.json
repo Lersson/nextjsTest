@@ -12,11 +12,13 @@
     "axios": "^1.6.8",
     "https-proxy-agent": "^7.0.4",
     "install": "^0.13.0",
+    "net": "^1.0.2",
     "next": "14.2.3",
     "node-fetch": "^3.3.2",
     "proxy-agent": "^6.4.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tls": "^0.0.1"
   },
   "devDependencies": {
     "eslint": "^8",

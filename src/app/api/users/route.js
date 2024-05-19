@@ -1,11 +1,11 @@
-
+import { baseFetchOptions } from "@/app/tools/baseFetchOptions";
 export async function GET() {
 
     const apiUrl = process.env.NEXT_PUBLIC_API_URL
 
     const res = await fetch(`${apiUrl}/users`, {
-        cache: 'no-store',
         method: "GET",
+        baseFetchOptions,
         headers: {
             'Content-Type':  'application/json',
         }
