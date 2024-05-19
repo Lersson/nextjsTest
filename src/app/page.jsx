@@ -1,5 +1,5 @@
 import getUsers from "./lib/getUsers";
-// export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic';
 const users = await getUsers()
 console.log(users)
 

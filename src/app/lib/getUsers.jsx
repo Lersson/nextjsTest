@@ -1,3 +1,6 @@
+export const dynamic = 'force-dynamic';
+
+
 export default async function getUsers(){
 
   const apiLocal = process.env.NEXT_PUBLIC_API_LOCAL
