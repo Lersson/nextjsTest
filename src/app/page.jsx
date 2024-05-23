@@ -1,4 +1,4 @@
-// import getUsers from "./lib/getUsers";
+import getUsers from "./lib/getUsers";
 
 
 
