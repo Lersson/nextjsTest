@@ -2,7 +2,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: "standalone",
-    optimizeFonts: false,
+    // optimizeFonts: false,
     
 };
 
