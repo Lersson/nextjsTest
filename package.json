@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^1.6.8",
+    "global-agent": "^3.0.0",
     "https-proxy-agent": "^7.0.4",
     "install": "^0.13.0",
     "net": "^1.0.2",

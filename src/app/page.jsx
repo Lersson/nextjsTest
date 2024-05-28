@@ -1,21 +1,12 @@
-
+import 'global-agent/bootstrap';
 export default async function Home() {
 
-var tunnel = require('tunnel');
- 
-var tunnelingAgent = tunnel.httpsOverHttp({
-  proxy: {
-    host: 'http://proxy.meioambiente.mg.gov.br',
-    port: 8080
-  }
-});
  
   const res = await fetch(`https://jsonplaceholder.typicode.com:443/users`, {
     method: "GET",
     headers: {
       'Content-Type':  'application/json',
     },
-    agent: tunnelingAgent
   })
   
   if (!res.ok) {
