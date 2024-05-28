@@ -1,4 +1,4 @@
-import 'global-agent/bootstrap';
+
 export default async function Home() {
 
  
